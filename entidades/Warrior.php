@@ -40,7 +40,12 @@ class Warrior extends Character implements ICharacter{
     }
     
     public function attack(\ICharacter $character,$damage = false) {
+
+		if($character->getClase() == "rogue") {
+			$damage = $this->getStr() * 2.5;
+		} else {
         $damage = $this->getStr() * 0.6;
+		}
         parent::attack($character,$damage);
     }
     
