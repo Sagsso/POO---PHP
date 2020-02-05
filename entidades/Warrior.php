@@ -34,8 +34,8 @@
 class Warrior extends Character implements ICharacter{
     
     public function __construct(string $nombre, string $raza, 
-            float $hp, float $str, float $ag) {
-        parent::__construct($nombre, $raza, "warrior", $hp * 2, 0, $str * 1.5, 0, $ag);
+            float $hp, float $str, float $md, float $ag) {
+        parent::__construct($nombre, $raza, "warrior", $hp * 2, 0, $str * 1.5, $md, $ag);
 
     }
     

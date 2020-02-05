@@ -9,20 +9,22 @@ spl_autoload_register(function($class){
    }
 });
 
-$p1 = new Character("Pablo", "Humano", "Villano", 150, 23, 28, 0, 43);
-$p2 = new Warrior("Jose", "Humano", 200, 23, 28);
-$p3 = new Mage("Sagsso", "Humano", 100, 23, 28, 5, 40);
-$p4 = new Rogue("Pacho", "Humano", 100, 20, 20, 20);
+// $p1 = new Character("Pablo", "Humano", "Villano", 150, 23, 28, 0, 43);
+$p2 = new Warrior("Jose", "Humano", 100, 50, 0, 25);
+$p3 = new Mage("Sagsso", "Elfo", 100, 50, 10, 50, 15);
+$p4 = new Rogue("Pacho", "Hombre lobo", 100, 20, 3, 50);
 
 $p2->attack($p3);
 $p2->attack($p4);
 
 $p4->attack($p3);
 $p4->attack($p2);
-$p4->attack($p1);
 
 $p2->attack($p4);
 $p2->attack($p4);
+
+$p3->attack($p2);
+$p3->attack($p4);
 
 
 //Create a warrior
