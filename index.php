@@ -16,8 +16,11 @@ $valentina = new Orco('Valentina', 'Femenino', 'llenito de amor', 100, 1, 80, 65
 echo $humano->getName()."<br>";
 echo "Intelecto: ".$humano->getIntl()."<br>";
 echo "Agilidad: ".$humano->getAgi()."<br>";
+$humano->attack('golpesito durito', $valentina);
 
 echo "<br>";
+echo "<br>";
+
 
 echo $valentina->getName()."<br>";
 echo "Intelecto: ".$valentina->getIntl()."<br>";

@@ -1,6 +1,8 @@
 <?php
 
-abstract class Humanoide implements AccionesHumanoides{
+// include_once './AccionesHumanoides.php';
+
+abstract class Humanoide {
 
     private $name;
     private $sex;
@@ -13,6 +15,9 @@ abstract class Humanoide implements AccionesHumanoides{
     private $pDef;
     private $mDef;
     private $xp;
+
+    private $class;
+    private $skills;
 
     function __construct(string $name, string $sex, string $bodyType, float $hp, int $level,
     float $str, float $intl, float $agi, float $pDef, float $mDef, float $xp) {
@@ -117,14 +122,17 @@ abstract class Humanoide implements AccionesHumanoides{
         $this->xp = $xp;
     }
 
-    public function learnSkill(string $skill, Humanoide $personaje){}
-    public function forgetSkill(string $skill, Humanoide $personaje){}
-    public function die(Humanoide $personaje){}
-    public function revive(Humanoide $personaje){}
-    public function levelUp($numOfLevels, Humanoide $personaje){}
-    public function levelDown($numOfLevels, Humanoide $personaje){}
-    public function takeDamage($damage, Humanoide $personaje){}
-    public function attack(string $skill, Humanoide $personaje){}
+    public function learnSkill(string $skill, Humanoide $personaje){
+
+    }
+
+    public function forgetSkill(string $skill, Humanoide $personaje){
+
+    }
+    public function attack(string $skill, Humanoide $personaje){
+        echo $this->name." ataca a ".$personaje->getName()."<br>";
+        AccionesHumanoides::attack($skill, $personaje);
+    }
 
 
 }
