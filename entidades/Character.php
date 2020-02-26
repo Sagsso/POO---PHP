@@ -99,7 +99,7 @@ class Character implements ICharacter{
         $this->ag = $ag;
     }
     
-    public function attack(ICharacter $character,$damage = false){
+    public function attack(Character $character,$damage = false){
         $finalDamage = ($damage) ? $damage : 
                 max($this->getStr(),$this->getAg(), $this->getMd()) * 0.4;
         

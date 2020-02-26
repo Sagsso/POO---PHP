@@ -11,5 +11,4 @@ interface AccionesHumanoides {
     public function takeDamage($damage, Humanoide $personaje);
     public function attack(string $skill, Humanoide $personaje);
 
-
 }

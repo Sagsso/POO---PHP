@@ -16,105 +16,115 @@ abstract class Humanoide implements AccionesHumanoides{
 
     function __construct(string $name, string $sex, string $bodyType, float $hp, int $level,
     float $str, float $intl, float $agi, float $pDef, float $mDef, float $xp) {
+        $this->name = $name;
+        $this->sex = $sex;
+        $this->bodyType = $bodyType;
+        $this->hp = $hp;
+        $this->level = $level;
+        $this->str = $str;
+        $this->intl = $intl;
+        $this->agi = $agi;
+        $this->pDef = $pDef;
+        $this->mDef = $mDef;
+        $this->xp = $xp;
     }
 
-    function getName(): string {
+    public function getName(): string {
         return $this->name;
     }
 
-    function getSex(): string {
+    public function getSex(): string {
         return $this->sex;
     }
 
-    function getBodyType(): string {
+    public function getBodyType(): string {
         return $this->bodyType;
     }
 
-    function getHp(): float {
+    public function getHp(): float {
         return $this->hp;
     }
 
-    function getLevel(): int {
+    public function getLevel(): int {
         return $this->level;
     }
 
-    function getStr(): float {
+    public function getStr(): float {
         return $this->str;
     }
 
-    function getIntl(): float {
+    public function getIntl(): float {
         return $this->intl;
     }
 
-    function getAgi(): float {
+    public function getAgi(): float {
         return $this->agi;
     }
 
-    function getPDef(): float {
+    public function getPDef(): float {
         return $this->pDef;
     }
 
-    function getMDef(): float {
+    public function getMDef(): float {
         return $this->mDef;
     }
 
-    function getXP(): float {
+    public function getXP(): float {
         return $this->xp;
     }
     
-    public function setName($name)
-    {
+    public function setName($name){
         $this->name = $name;
     }
 
-    public function setSex($sex)
-    {
+    public function setSex($sex){
         $this->sex = $sex;
     }
 
-    public function setBodyType($bodyType)
-    {
+    public function setBodyType($bodyType){
         $this->bodyType = $bodyType;
     }
 
-    public function setHp($hp)
-    {
+    public function setHp($hp){
         $this->hp = $hp;
     }
 
-    public function setLevel($level)
-    {
+    public function setLevel($level){
         $this->level = $level;
     }
 
-
-    public function setStr($str)
-    {
+    public function setStr($str){
         $this->str = $str;
     }
 
-    public function setIntl($intl)
-    {
+    public function setIntl($intl){
         $this->intl = $intl;
     }
 
-    public function setAgi($agi)
-    {
+    public function setAgi($agi){
         $this->agi = $agi;
     }
 
-    public function setPDef($pDef)
-    {
+    public function setPDef($pDef){
         $this->pDef = $pDef;
     }
 
-    public function setMDef($mDef)
-    {
+    public function setMDef($mDef){
         $this->mDef = $mDef;
     }
 
-    public function setXp($xp)
-    {
+    public function setXp($xp){
         $this->xp = $xp;
     }
+
+    public function learnSkill(string $skill, Humanoide $personaje){}
+    public function forgetSkill(string $skill, Humanoide $personaje){}
+    public function die(Humanoide $personaje){}
+    public function revive(Humanoide $personaje){}
+    public function levelUp($numOfLevels, Humanoide $personaje){}
+    public function levelDown($numOfLevels, Humanoide $personaje){}
+    public function takeDamage($damage, Humanoide $personaje){}
+    public function attack(string $skill, Humanoide $personaje){}
+
+
 }
